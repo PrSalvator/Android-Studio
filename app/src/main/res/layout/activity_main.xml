@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <!-- Список новых книг -->
+    <androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        android:padding="16dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!-- Заголовок для новых книг -->
+            <TextView
+                android:id="@+id/tvNewBooks"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Новые книги"
+                android:textSize="18sp"
+                android:padding="8dp" />
+
+            <!-- Список новых книг -->
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerViewNewBooks"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:nestedScrollingEnabled="false" />
+
+            <!-- Заголовок для прочитанных книг -->
+            <TextView
+                android:id="@+id/tvReadBooks"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Прочитанные книги"
+                android:textSize="18sp"
+                android:padding="8dp"
+                android:layout_marginTop="16dp" />
+
+            <!-- Список прочитанных книг -->
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerViewReadBooks"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:nestedScrollingEnabled="false" />
+
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+    <!-- Кнопка для добавления книг -->
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fabAddBook"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="end|bottom"
+        android:layout_margin="16dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:src="@drawable/plus" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
