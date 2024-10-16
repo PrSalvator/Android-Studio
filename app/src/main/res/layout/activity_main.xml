@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:gravity="center"
+    android:background="@color/white">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Настройка игры"
+        android:textSize="24sp"
+        android:textColor="@color/black"
+        android:layout_gravity="center_horizontal" />
+
+    <!-- Выбор количества мышек -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Количество мышек:"
+        android:layout_marginTop="24dp" />
+
+    <Spinner
+        android:id="@+id/mouse_count_spinner"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <!-- Ползунок для выбора скорости -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Скорость мышек:"
+        android:layout_marginTop="24dp" />
+
+    <SeekBar
+        android:id="@+id/speed_seekbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:min="5"
+        android:max="15" />
+
+    <!-- Ползунок для выбора размера -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Размер мышек:"
+        android:layout_marginTop="24dp" />
+
+    <SeekBar
+        android:id="@+id/size_seekbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:min="50"
+        android:max="200" />
+
+    <!-- Кнопки -->
+    <Button
+        android:id="@+id/start_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Старт"
+        android:layout_marginTop="32dp" />
+
+    <Button
+        android:id="@+id/score_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Счёт"
+        android:layout_marginTop="16dp" />
+</LinearLayout>
